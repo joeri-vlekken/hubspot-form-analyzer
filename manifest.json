@@ -3,7 +3,7 @@
 
   "name": "HubSpot Form Analyzer",
   "description": "This extension will detect all HubSpot forms and expose all hidden fields.",
-  "version": "1.1.0",
+  "version": "1.1.1",
 
   "browser_action": {
     "default_icon": "icon16.png",
@@ -16,7 +16,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*/*"],
+      "matches": ["<all_urls>"],
       "css": ["override.css"],
       "js": ["content-script.js"]
     }
