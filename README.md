@@ -7,7 +7,8 @@ This extension can be helpful when debugging HubSpot forms.
 
 ## Installation
 
-You can view or fork the source code as you like, but installation through the Chrome Web Store
+You can view or fork the source code as you like, but installation through the 
+[Chrome Web Store](https://chrome.google.com/webstore/detail/hubspot-form-analyzer/nlibkljlgegafojbafbhieboipfjakpl)
 is recommended.
 
 
