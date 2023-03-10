@@ -15,7 +15,7 @@ const updateForms = () => {
           chrome.storage.sync.get(["hsfa_showEdit"], function (result) {
             console.log(result.hsfa_showEdit);
             if (!result.hsfa_showEdit) {
-              header = `${fieldStart}HubSpot form: <a href="https://app.hubspot.com/forms/${form.dataset.portalId}/${form.dataset.formId}/" target="_blank">Edit</a> Account: <a href="https://app.hubspot.com/home?portalId=${form.dataset.portalId}" target="_blank">${form.dataset.portalId}</a>${fieldEnd}`;
+              header = `${fieldStart}HubSpot form: <a href="https://app.hubspot.com/forms/${form.dataset.portalId}/${form.dataset.formId}/performance" target="_blank">Edit</a> Account: <a href="https://app.hubspot.com/home?portalId=${form.dataset.portalId}" target="_blank">${form.dataset.portalId}</a>${fieldEnd}`;
             } else {
               header = `${fieldStart}HubSpot form ${form.dataset.formId} on account ${form.dataset.portalId}${fieldEnd}`;
             }
