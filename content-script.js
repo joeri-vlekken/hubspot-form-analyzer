@@ -24,13 +24,12 @@ const updateForms = () => {
         }
 
         // Get all HubSpot fields from the form
-        const fields = form.querySelectorAll(".hs-form-field");
+        const fields = form.querySelectorAll(".hs-form-field, .hs-form__field");
 
         // Iterate through each HubSpot form field
         fields.forEach((field) => {
           const inputField = field
-            .querySelector(".input")
-            .querySelector(".hs-input");
+            .querySelector(".input .hs-input");
           // If hidden: add the debug class and change the hidden input to text.
           if (inputField && inputField.type === "hidden") {
             field.classList.add("hs-form-debug-highlight");
@@ -62,7 +61,7 @@ const callback = (mutations) => {
       );
       if (
         listValues.flat().some(function (v) {
-          return v.indexOf("hbspt") >= 0;
+          return v.toLowerCase().includes("hs-form") || v.toLowerCase().includes("hsform");
         })
       ) {
         updateForms();
